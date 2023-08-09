@@ -1,4 +1,4 @@
-import { createWebHistory, createRouter } from 'vue-router'
+import { createWebHistory, createRouter } from 'vue-router';
 
 const routes = [
   {
@@ -7,6 +7,18 @@ const routes = [
     name: 'ESGames',
     component: () => import('./components/ESGameIndex')
   },
-  {},
-  {}
-]
+  {
+    path: '/ESGames/:id',
+    name: 'esgame-details',
+    component: () => import('./components/ESGame')
+  },
+  {
+    path: '/new',
+    name: 'new',
+    component: () => import('./components/AddGame')
+  }
+];
+
+const router = createRouter({ history: createWebHistory(), routes });
+
+export default router;
