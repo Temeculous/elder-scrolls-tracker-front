@@ -5,17 +5,17 @@ const routes = [
     path: '/',
     alias: '/ESGames',
     name: 'ESGames',
-    component: () => import('./components/ESGameIndex')
+    component: () => import('./components/ESGameIndex.vue')
   },
   {
     path: '/ESGames/:id',
     name: 'esgame-details',
-    component: () => import('./components/ESGame')
+    component: () => import('./components/ESGame.vue')
   },
   {
     path: '/new',
     name: 'new',
-    component: () => import('./components/AddGame')
+    component: () => import('./components/AddGame.vue')
   }
 ];
 
