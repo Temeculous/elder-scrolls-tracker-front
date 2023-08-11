@@ -1,19 +1,17 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
+import GameIndex from './components/ESGameIndex.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
+  <nav>
+    <router-link to="/">All Games</router-link>
+    <router-link to="/new">Add new game</router-link>
+  </nav>
 
   <main>
-    <TheWelcome />
+    <GameIndex />
   </main>
 </template>
 
