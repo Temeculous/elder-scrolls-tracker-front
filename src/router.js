@@ -1,24 +1,28 @@
-import { createWebHistory, createRouter } from 'vue-router';
+import { createWebHistory, createRouter } from 'vue-router'
+import ESGame from './components/ESGame.vue'
+import ESGameIndex from './components/ESGameIndex.vue'
+import AddGame from './components/AddGame.vue'
 
 const routes = [
   {
     path: '/',
     alias: '/ESGames',
     name: 'ESGames',
-    component: () => import('./components/ESGameIndex.vue')
+    component: ESGameIndex
   },
   {
     path: '/ESGames/:id',
     name: 'esgame-details',
-    component: () => import('./components/ESGame.vue')
+    component: ESGame,
+    props: true
   },
   {
     path: '/new',
     name: 'new',
-    component: () => import('./components/AddGame.vue')
+    component: AddGame
   }
-];
+]
 
-const router = createRouter({ history: createWebHistory(), routes });
+const router = createRouter({ history: createWebHistory(), routes })
 
-export default router;
+export default router
