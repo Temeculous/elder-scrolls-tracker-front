@@ -1,45 +1,20 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
 import GameIndex from './components/ESGameIndex.vue'
 </script>
 
 <template>
-  <nav>
-    <router-link to="/">All Games</router-link>
-    <router-link to="/new">Add new game</router-link>
+  <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <div class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <router-link to="/" class="nav-link">All Games</router-link>
+      </li>
+      <li class="nav-item">
+        <router-link to="/new" class="nav-link">Add new game</router-link>
+      </li>
+    </div>
   </nav>
 
-  <main>
-    <GameIndex />
-  </main>
+<div class="container mt-3">
+  <router-view />
+  </div>
 </template>
-
-<style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>
