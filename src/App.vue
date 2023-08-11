@@ -14,7 +14,7 @@ import GameIndex from './components/ESGameIndex.vue'
     </div>
   </nav>
 
-<div class="container mt-3">
-  <router-view />
+  <div class="container mt-3">
+    <router-view />
   </div>
 </template>
