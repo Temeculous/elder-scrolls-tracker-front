@@ -1,6 +1,4 @@
 <template>
-  <div>Test</div>
-  <p>There will be a form here!</p>
   <div class="submit-form">
     <div v-if="!submitted">
       <div class="form-group">
@@ -10,7 +8,7 @@
           class="form-control"
           id="title"
           required
-          v-model="esgame.title"
+          v-model="esgames.title"
           name="title"
         />
       </div>
@@ -21,7 +19,7 @@
           class="form-control"
           id="popularity"
           required
-          v-model="esgame.popularity"
+          v-model="esgames.popularity"
           name="popularity"
         />
       </div>
@@ -31,7 +29,7 @@
           type="number"
           class="form-control"
           id="releaseYear"
-          v-model="esgame.releaseYear"
+          v-model="esgames.releaseYear"
           name="releaseYear"
         />
       </div>
@@ -48,10 +46,10 @@
 import GameDataService from '../services/GameDataService.js'
 
 export default {
-  name: 'add game',
+  name: 'add-game',
   data() {
     return {
-      esgame: {
+      esgames: {
         id: null,
         title: '',
         popularity: '',
@@ -63,14 +61,14 @@ export default {
   methods: {
     saveGame() {
       let data = {
-        title: this.esgame.title,
-        popularity: this.esgame.popularity,
-        releaseYear: this.esgame.releaseYear
+        title: this.esgames.title,
+        popularity: this.esgames.popularity,
+        releaseYear: this.esgames.releaseYear
       }
 
       GameDataService.create(data)
         .then((response) => {
-          this.esgame.id = response.data.id
+          this.esgames.id = response.data.id
           console.log(response.data)
           this.submitted = true
         })
@@ -80,7 +78,7 @@ export default {
     },
     newGame() {
       this.submitted = false
-      this.esgame = {}
+      this.esgames = {}
     }
   }
 }
