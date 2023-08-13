@@ -63,7 +63,8 @@ export default {
         id: null,
         title: '',
         popularity: '',
-        releaseYear: 0
+        releaseYear: 0,
+        completionHours: 0
       },
       submitted: false
     }

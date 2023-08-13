@@ -1,7 +1,7 @@
 <template>
   <div class="list row">
     <div class="col-md-6">
-      <h4>Games</h4>
+      <h4>Elder Scrolls Games</h4>
       <ul class="list-group">
         <li
           class="list-group-item"
@@ -17,7 +17,7 @@
     </div>
     <div class="col-md-6">
       <div v-if="currentGame">
-        <h4>Game</h4>
+        <h4>Game Details</h4>
         <div>
           <label><strong>Title:</strong></label> {{ currentGame.title }}
         </div>
