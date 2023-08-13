@@ -33,6 +33,16 @@
           name="releaseYear"
         />
       </div>
+      <div class="form-group">
+        <label for="completionHours">Completion Hours</label>
+        <input
+          type="number"
+          class="form-control"
+          id="completionHours"
+          v-model="esgames.completionHours"
+          name="completionHour"
+        />
+      </div>
       <button @click="saveGame" class="btn btn-success">Submit</button>
     </div>
     <div v-else>
