@@ -2,31 +2,31 @@ import http from '../http-common.js'
 
 class GameDataService {
   getAll() {
-    return http.get('/api/ESGames')
+    return http.get('/')
   }
 
   get(id) {
-    return http.get(`/api/ESGames/${id}`)
+    return http.get(`/${id}`)
   }
 
   create(data) {
-    return http.post('/api/ESGames', data)
+    return http.post('/', data)
   }
 
   update(id, data) {
-    return http.put(`/api/ESGames/${id}`, data)
+    return http.put(`/${id}`, data)
   }
 
   delete(id) {
-    return http.delete(`/api/ESGames/${id}`)
+    return http.delete(`/${id}`)
   }
 
   deleteAll() {
-    return http.delete('/api/ESGames')
+    return http.delete('/')
   }
 
   findByTitle(title) {
-    return http.get(`/api/ESGames?=${title}`)
+    return http.get(`/?=${title}`)
   }
 }
 
