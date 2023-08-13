@@ -73,7 +73,8 @@ export default {
       let data = {
         title: this.esgames.title,
         popularity: this.esgames.popularity,
-        releaseYear: this.esgames.releaseYear
+        releaseYear: this.esgames.releaseYear,
+        completionHours: this.esgames.completionHours
       }
 
       GameDataService.create(data)
