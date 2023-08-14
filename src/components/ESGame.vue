@@ -29,8 +29,8 @@
         />
       </div>
     </form>
-    <button class="badge badge-danger mr-2" @click="deleteGame">Delete</button>
-    <button type="submit" class="badge badge-success" @click="updateGame">Update</button>
+    <button class="badge bg-danger mr-2" @click="deleteGame">Delete</button>
+    <button type="submit" class="badge bg-success" @click="updateGame">Update</button>
     <p>{{ message }}</p>
   </div>
   <div v-else>
@@ -43,7 +43,7 @@
 import GameDataService from '../services/GameDataService.js'
 
 export default {
-  name: 'esgames',
+  name: "esgames",
   data() {
     return {
       currentGame: null,
@@ -52,38 +52,33 @@ export default {
   },
   methods: {
     getGame(id) {
-      GameDataService.get(id)
-        .then((response) => {
-          this.currentGame = response.data
-          console.log(response.data)
-        })
-        .catch((err) => {
-          console.log(err)
-        })
+      GameDataService.get(id).then(response => {
+        this.currentGame = response.data
+        console.log(response.data)
+      }).catch(err => {
+        console.log(err)
+      })
     },
     updateGame() {
-      GameDataService.update(this.currentGame.id, this.currentGame)
-        .then((response) => {
-          console.log(response.data)
-          this.message = 'Game succesfully updated!'
-        })
-        .catch((err) => {
-          console.log(err)
-        })
+      GameDataService.update(this.currentGame.id, this.currentGame).then(response => {
+        console.log(response.data)
+        this.message = 'Game succesfully updated!'
+      }).catch(err => {
+        console.log(err)
+      })
     },
     deleteGame() {
-      GameDataService.delete(this.currentGame.id)
-        .then((response) => {
-          console.log(response.data)
-          this.$router.push({ name: 'esgames' })
-        })
-        .catch((err) => {
-          console.log(err)
-        })
+      GameDataService.delete(this.currentGame.id).then(response => {
+        console.log(response.data)
+        this.$router.push({name: 'esgames'})
+      }).catch(err => {
+        console.log(err)
+      })
     }
   },
   mounted() {
-    ;(this.message = ''), this.getGame(this.$route.params.id)
+    this.message = '',
+    this.getGame(this.$route.params.id)
   }
 }
 </script>
