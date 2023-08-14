@@ -30,7 +30,7 @@
         <div>
           <label><strong>Completion Hours:</strong></label> {{ currentGame.completionHours }}
         </div>
-        <router-link :to="'/ESGames/' + currentGame.id" class="badge badge-warning"
+        <router-link :to="'/ESGames/' + currentGame.id" class="badge bg-warning"
           >Edit</router-link
         >
       </div>
