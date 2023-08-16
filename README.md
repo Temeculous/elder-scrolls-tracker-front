@@ -1,6 +1,6 @@
 # elder-scrolls-tracker-front
 
-This template should help get you started developing with Vue 3 in Vite.
+https://fascinating-crepe-a1304b.netlify.app/
 
 ## Recommended IDE Setup
 
