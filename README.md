@@ -1,6 +1,6 @@
 # elder-scrolls-tracker-front
 
-https://fascinating-crepe-a1304b.netlify.app/
+Deployed: https://fascinating-crepe-a1304b.netlify.app/
 
 ## Recommended IDE Setup
 
